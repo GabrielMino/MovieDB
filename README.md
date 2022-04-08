@@ -48,11 +48,13 @@ Every time the app is restart the process rerun, so in order to stop the same th
      "voteAverage":7}
      
  3) Security with JWT. 
+ 
     a) SignUp
     http://localhost:8081/signup/
     
-    {"email":"admin@admin.com",
-    "password":"123456"}
+    {"email":"admin@admin.com",  -> email form has to be valid
+    "password":"123456"}         -> password length minimum of 6 characters
+    
     
     b)SignIn
     http://localhost:8081/signin/
