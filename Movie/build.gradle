@@ -1,0 +1,52 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.movie'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	// https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core
+	implementation group: 'org.springframework.batch', name: 'spring-batch-core'
+	
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+	
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	
+	implementation group: 'javax.xml.bind', name: 'jaxb-api'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	
+	implementation group: 'mysql', name: 'mysql-connector-java'
+	
+	implementation("org.hibernate:hibernate-core:5.5.9.Final")
+    
+  
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'com.h2database', name: 'h2'
+	testImplementation group: 'org.springframework.security', name: 'spring-security-test'
+	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
