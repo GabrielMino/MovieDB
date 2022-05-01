@@ -7,6 +7,7 @@ The project is divided into three blocks:
 1) Extract the information from the API and persist it in the Database through MYSQL.
 To carry out this process: Spring Batch, through which a job can be scheduled. 
 The steps of the job are: 
+
                         a) read the data from the api
                         
                         b) proceess the data(convert Dto to an Entity)
