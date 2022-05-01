@@ -6,9 +6,13 @@ The project is divided into three blocks:
 
 1) Extract the information from the API and persist it in the Database through MYSQL.
 To carry out this process: Spring Batch, through which a job can be scheduled. 
-The steps of the job are: a) read the data from the api
-                          b) proceess the data(convert Dto to an Entity)
-                          c) persist in the database
+The steps of the job are: 
+                        a) read the data from the api
+                        
+                        b) proceess the data(convert Dto to an Entity)
+                        
+                        c) persist in the database
+                        
 Every time the app is restart the process rerun, so in order to stop the same the annotation (spring.batch.job.enabled=false), should be included in the application.proerties file.
 
 2) Generate two endpoints that bring to front end 
